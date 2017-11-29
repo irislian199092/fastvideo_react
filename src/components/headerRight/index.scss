@@ -1,0 +1,174 @@
+.player_wrap{
+    height: 100%;
+    border: 2px solid #000;
+    .player_header{
+        border-bottom: 2px #000 solid;
+        height: 50px;
+        position: relative;
+        .player_title{
+            color: #fff;
+            height: 46px;
+            line-height: 46px;
+            margin-left: 10px;
+            float: left;
+        }
+        .player_time{
+            width: 185px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -90px;
+            span{
+                line-height: 46px;
+                height: 46px;
+                color: #888;
+                width: 90px;
+                display: inline-block;
+                font-size: 14px;
+                cursor:pointer;
+            }
+        }
+        .player_bar{
+            float: right;
+            line-height: 40px;
+            margin-top: 5px;
+            font-size: 20px;
+            li{
+                margin-right: 10px;
+                float: left;
+                list-style: none;
+                a{
+                    color: #3d3e40;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: #888;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .player_body{ 
+        margin: 0 auto;
+        height: calc(100% - 142px);
+        position: relative;
+        #ocx{
+            height:100%;
+            background:#000;
+            position: relative;
+            video{
+                width:100%;
+                height: 100%;
+                position: absolute;
+            }
+        }
+        
+    }
+    $timeRuler: "player_time_ruler";
+    .#{$timeRuler}_box{
+        border-bottom: 1px solid #000;
+        box-sizing:content-box;
+        .#{$timeRuler}{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .#{$timeRuler}_container{
+                position: relative;
+                height: calc(100% - 16px);
+                .#{$timeRuler}_canvas{
+                    overflow: hidden;
+                    position: absolute;
+                    width:100%;
+                }
+                .#{$timeRuler}_trimInOut{
+                    position: absolute;
+                    height: 10px;
+                    top:0;
+                    overflow: hidden;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    margin-top: 0px;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                    z-index: 0;
+                    .#{$timeRuler}_trimIn {
+                        cursor: e-resize;
+                        width: 5px;
+                        float: left;
+                        overflow: hidden;
+                        background-color: rgba(255, 253, 253, 0);
+                        border-left: solid 1px #d78136;
+                        border-top: solid 1px #d78136;
+                        border-bottom: solid 1px #d78136;
+                    }
+                    .#{$timeRuler}_trimOut{
+                        cursor: e-resize;
+                        width: 5px;
+                        float: right;
+                        overflow: hidden;
+                        background-color: rgba(255, 253, 253, 0);
+                        border-right: solid 1px #d78136;
+                        border-top: solid 1px #d78136;
+                        border-bottom: solid 1px #d78136;
+                    }
+                } 
+                .#{$timeRuler}_cursor{
+                    position: absolute;
+                    margin-left: 1px;
+                    top: 20px;
+                    z-index: 3;
+                    cursor: move;
+                    .#{$timeRuler}_cursor_top{
+                        position: absolute;
+                        left: -7px;
+                        width: 14px;
+                        height: 14px;
+                        /* background: url("../images/cursor.png") no-repeat; */
+                        z-index: 3;
+                    }
+               }
+            }
+            .#{$timeRuler}_slider_track{
+                width: 100%;
+                height: 16px;
+                position: relative;
+                background: #18191A;
+                .#{$timeRuler}_slider_scroll_total{
+                    height: 14px;
+                    position: absolute;
+                    left: 0px;
+                    top:1px;
+                    // cursor: move;
+                    .#{$timeRuler}_slider_scroll_middle{
+                        top:1px;
+                        height: 14px;
+                        background: #323338;
+                        //background: rgba(50,51,56,1.00);
+                        position: absolute;
+                        
+                    }
+                    .#{$timeRuler}_slider_scroll_middle.now{
+                        background: #333;
+                    }
+                    .#{$timeRuler}_slider_scroll_left{
+                        width: 14px;
+                        height: 14px;
+                        background:#999;
+                        position: absolute;
+                        left:0px;
+
+                    }
+                    .#{$timeRuler}_slider_scroll_right{
+                        width: 14px;
+                        height: 14px;
+                        background:#999;
+                        position: absolute;
+                    }
+                }
+            }           
+        }  
+    }
+    .player_footer{
+        height: 40px;
+    }
+
+}
