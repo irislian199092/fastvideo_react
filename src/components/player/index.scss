@@ -1,0 +1,215 @@
+.player_wrap{
+    height: calc(100% - 340px);
+    width: 50%;
+    float: left;
+    border-bottom: 2px solid #000;
+    .player_header{
+    	height:51px;
+    	border-bottom: 1px solid #000;
+    	.player_name{
+    		float: left;
+    		color:#fff;
+    		height: 50px;
+    		line-height:50px;
+    		text-align:center;
+            width:100px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            font-size:14px;
+    	}
+        .player_time{
+            width:calc(100% - 175px);
+            float: left;
+            color:#999;
+            height: 50px;
+            line-height:50px;
+            text-align:center;
+            font-size:14px;
+            .player_total_duration{
+                padding:0 15px;
+            }
+            .player_triminout_duration{
+                padding:0 15px;
+            }
+        }
+        .player_file{
+            float:right;
+            width:60px;
+            color:#999;
+            height: 50px;
+            line-height:50px;
+            text-align:center;
+            font-size:20px;
+            padding-right: 15px;
+            li{
+                float: left;
+                width:30px;
+            }
+        }
+    }
+
+    .player_body{
+        height: calc(100% - 51px); 
+
+        .player_box{
+            height:calc(100% - 92px);
+            width:100%;
+            video{
+                height: 100%;
+                background:#000;
+            }
+        }
+
+        .player_time_ruler_box{
+            width:100%;
+            overflow: hidden;
+            .player_time_ruler{
+                height: 52px;
+                width:100%;
+                position: relative;
+                .player_time_ruler_container{
+                    height: 36px;
+                    width:100%;
+                    position: relative;
+                    .player_time_ruler_canvas{
+                        width:100%;
+                        position: absolute;
+                        overflow: hidden;
+                    }
+                    .player_time_ruler_trimInOut{
+                        position: absolute;
+                        height: 13px;
+                        top: 20px;
+                        overflow: hidden;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        margin-top: 0px;
+                        padding: 0px;
+                        margin-bottom: 0px;
+                        z-index: 0;
+                        width:100px;
+                        .player_time_ruler_trimIn{
+                            cursor: e-resize;
+                            width: 5px;
+                            height: 13px;
+                            float: left;
+                            overflow: hidden;
+                            background-color: rgba(255, 253, 253, 0);
+                            border-left: solid 1px #d78136;
+                            border-top: solid 1px #d78136;
+                            border-bottom: solid 1px #d78136;
+                        }
+                        .player_time_ruler_trimOut{
+                            cursor: e-resize;
+                            width: 5px;
+                            height: 13px;
+                            float: right;
+                            overflow: hidden;
+                            background-color: rgba(255, 253, 253, 0);
+                            border-right: solid 1px #d78136;
+                            border-top: solid 1px #d78136;
+                            border-bottom: solid 1px #d78136;
+                        }
+                    }
+                }
+                .player_time_ruler_cursor{
+                    position: absolute;
+                    margin-left: 1px;
+                    top: 20px;
+                    z-index: 3;
+                    cursor: move;
+                    left:0px;
+                    .player_time_ruler_cursor_top{
+                        position: absolute;
+                        left: -7px;
+                        width: 14px;
+                        height: 14px;
+                        background: url(../../images/cursor.png) no-repeat;
+                        z-index: 3;
+                    }
+                }
+                .player_time_ruler_slider_track{
+                    width: 100%;
+                    height: 16px;
+                    position: relative;
+                    background: #18191A;
+                    .player_time_ruler_slider_scroll_total {
+                        height: 14px;
+                        position: absolute;
+                        left: 0px;
+                        top: 1px;
+                        .player_time_ruler_slider_scroll_left {
+                            width: 14px;
+                            height: 14px;
+                            background: #999;
+                            position: absolute;
+                            left: 0px;
+                        }
+                        .player_time_ruler_slider_scroll_middle {
+                            top: 1px;
+                            height: 14px;
+                            background: #323338;
+                            position: absolute;
+                            left:14px;
+                        }
+                        .player_time_ruler_slider_scroll_right {
+                            width: 14px;
+                            height: 14px;
+                            background: #999;
+                            position: absolute;
+                            left:620px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .player_toolbar_box{
+            height: 40px;
+            .player_toolbar_list{
+                width:324px;
+                height: 40px;
+                li{
+                    float:left;
+                    a{
+                        display: block;
+                        width: 36px;
+                        height: 40px;
+                        color: #3d3e40;
+                        text-decoration: none;
+                        outline: none;
+                    }
+                    .icon-1{
+                        background: url(../../images/icons.png) -123px -122px no-repeat;
+                    }
+                    .icon-2{
+                        background: url(../../images/icons.png)  -400px 0 no-repeat;
+                    }
+                    .icon-3{
+                        background: url(../../images/icons.png) 0px 0px no-repeat;
+                    }
+                    .icon-4{
+                        background: url(../../images/icons.png) -80px 0px no-repeat;
+                    }
+                    .icon-5{
+                        background: url(../../images/icons.png) -160px 0px no-repeat;
+                    }
+                    .icon-6{
+                        background: url(../../images/icons.png) -240px 0px no-repeat;
+                    }
+                    .icon-7{
+                        background: url(../../images/icons.png) -320px 0px no-repeat;
+                    }
+                    .icon-8{
+                        background: url(../../images/icons.png) -440px 0px no-repeat;
+                    }
+                    .icon-9{
+                        background: url(../../images/icons.png) 0px -122px no-repeat;
+                    }
+
+                }
+            }
+        }
+    }
+}
